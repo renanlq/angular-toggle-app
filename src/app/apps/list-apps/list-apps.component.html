@@ -8,15 +8,15 @@
     <ng-container matColumnDef="methods">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Métodos</th>
       <td mat-cell *matCellDef="let row">
-        <table *ngFor="let item of row.methods" class="table-data full-width-table" aria-label="Elements">
-          <ng-container matRow matColumnDef="methods">
-            <td mat-column class="cl-width-70">
+        <table class="full-width-table" aria-label="Elements">
+          <tr *ngFor="let item of row.methods" matRow matColumnDef="methods" class="table-data">
+            <td mat-column class="cl-width-70 td-align-left">
               <label>{{item.name}}</label>
             </td>
-            <td mat-column>
+            <td mat-column class="td-align-center">
                 <mat-slide-toggle [checked]=item.status></mat-slide-toggle>
             </td>
-          </ng-container>
+          </tr>
         </table>
       </td>
     </ng-container>
