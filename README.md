@@ -9,7 +9,7 @@ Projeto para controle de feature flags/toggle, em versão do Angular 7.0.2.
 * cmd: _ng add @angular/material_
 * cmd: _ng generate @angular/material:material-nav --name="app-nav"_
   * add <app-nav></app-nav> to app.component.html
-* cmd: _ng generate @angular/material:material-table --name=“list-apps”_
+* cmd: _ng generate @angular/material:material-table --name=“apps-list”_
   * add <app-table></app-table> to app-nav.component.html
 * cmd: _ng add @angular/pwa_
 * cmd: _npm install lite-server --save-dev_

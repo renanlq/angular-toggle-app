@@ -11,8 +11,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { AppAppsComponent } from './apps/list-apps/list-apps.component';
-
+import { AppAppsComponent } from './apps/component/apps-list.component';
+import { AppsService } from './apps/service/apps.service'
 
 @NgModule({
   declarations: [
@@ -37,7 +37,11 @@ import { AppAppsComponent } from './apps/list-apps/list-apps.component';
     MatExpansionModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    AppsService
+  ],
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

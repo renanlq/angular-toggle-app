@@ -2,7 +2,6 @@ import { DataSource } from '@angular/cdk/collections';
 import { MatPaginator, MatSort } from '@angular/material';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
-import { AppsService } from '../service/apps.service';
 import { AppsViewModel } from '../viewmodel/apps-view-model';
 
 /**
@@ -12,13 +11,10 @@ import { AppsViewModel } from '../viewmodel/apps-view-model';
  */
 export class AppAppsDataSource extends DataSource<AppsViewModel> {
   
-  data: AppsViewModel[];
+  public data: AppsViewModel[];
 
-  constructor(private paginator: MatPaginator, private sort: MatSort, private appsService: AppsService) {
+  constructor(private paginator: MatPaginator, private sort: MatSort) {
     super();
-
-    debugger
-    this.data = this.appsService.getApps();
   }
 
   /**
