@@ -1,4 +1,4 @@
-# ToggleApp
+# ToggleApp (pt-br)
 
 Projeto para controle de feature flags/toggle, em versão do Angular 7.0.2.
 

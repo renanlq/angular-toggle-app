@@ -13,6 +13,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { AppAppsComponent } from './apps/component/apps-list.component';
 import { AppsService } from './apps/service/apps.service'
+import { HttpResponse } from './core/http/http-response'
+import { HttpResponseMock } from './core/mocks/http-response-mock'
 
 @NgModule({
   declarations: [
@@ -38,10 +40,12 @@ import { AppsService } from './apps/service/apps.service'
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
-    AppsService
+    AppsService,
+    HttpResponse,
+    HttpResponseMock
   ],
   bootstrap: [
-    AppComponent
+    AppComponent,
   ]
 })
 export class AppModule { }
